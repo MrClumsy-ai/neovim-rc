@@ -13,6 +13,8 @@ vim.keymap.set("n", "k", "kzz")
 vim.keymap.set("n", "{", "{zz")
 vim.keymap.set("n", "}", "}zz")
 vim.keymap.set("n", "G", "Gzz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
 
 -- move 10
 vim.keymap.set("n", "J", "10jzz")
@@ -30,6 +32,9 @@ vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("x", "<leader>p", "\"_dP")
 vim.keymap.set("n", "<leader>d", "\"_d")
 vim.keymap.set("v", "<leader>d", "\"_d")
+vim.keymap.set("n", "c", "\"_c")
+vim.keymap.set("v", "c", "\"_c")
+vim.keymap.set("n", "x", "\"_x")
 
 -- copy to system clipboard
 vim.keymap.set("n", "<leader>y", "\"+y")
