@@ -4,7 +4,7 @@ vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 -- exit insert mode
-vim.keymap.set("i", "jj", "<Esc>")
+vim.keymap.set("i", "<C-j>", "<Esc>")
 vim.keymap.set("v", "<C-j>", "<Esc>")
 
 -- center movement
