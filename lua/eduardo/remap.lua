@@ -42,6 +42,7 @@ vim.keymap.set("n", "<leader>Y", "\"+Y")
 
 -- replace word selected
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+vim.keymap.set("n", "<leader>/", [[/<C-r><C-w><CR>]])
 
 -- flop command
 vim.keymap.set("n", "Q", "<nop>")
