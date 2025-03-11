@@ -66,6 +66,19 @@ local plugins = {
         end
     },
 
+    -- cursorline
+    { "ya2s/nvim-cursorline" },
+
+    -- color by mode
+    {
+        'mawkler/modicator.nvim',
+        dependencies = 'ellisonleao/gruvbox.nvim',
+        init = function()
+            -- These are required for Modicator to work
+            vim.o.number = true
+            vim.o.termguicolors = true
+        end
+    },
 }
 local opts = {}
 require("lazy").setup(plugins, opts)
