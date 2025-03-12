@@ -1,5 +1,3 @@
-
-
 -- project viewer (open nvim file explorer)
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
@@ -31,17 +29,17 @@ vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- void register
-vim.keymap.set("x", "<leader>p", "\"_dP")
-vim.keymap.set("n", "<leader>d", "\"_d")
-vim.keymap.set("v", "<leader>d", "\"_d")
-vim.keymap.set("n", "c", "\"_c")
-vim.keymap.set("v", "c", "\"_c")
-vim.keymap.set("n", "x", "\"_x")
+vim.keymap.set("x", "<leader>p", '"_dP')
+vim.keymap.set("n", "<leader>d", '"_d')
+vim.keymap.set("v", "<leader>d", '"_d')
+vim.keymap.set("n", "c", '"_c')
+vim.keymap.set("v", "c", '"_c')
+vim.keymap.set("n", "x", '"_x')
 
 -- copy to system clipboard
-vim.keymap.set("n", "<leader>y", "\"+y")
-vim.keymap.set("v", "<leader>y", "\"+y")
-vim.keymap.set("n", "<leader>Y", "\"+Y")
+vim.keymap.set("n", "<leader>y", '"+y')
+vim.keymap.set("v", "<leader>y", '"+y')
+vim.keymap.set("n", "<leader>Y", '"+Y')
 
 -- replace word selected
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
@@ -54,7 +52,7 @@ vim.keymap.set("n", "Q", "<nop>")
 vim.keymap.set("i", "(", "()<Esc>i")
 vim.keymap.set("i", "[", "[]<Esc>i")
 vim.keymap.set("i", "{", "{}<Esc>i")
-vim.keymap.set("i", "\"", "\"\"<Esc>i")
+vim.keymap.set("i", '"', '""<Esc>i')
 
 -- plugin commands:
 -- floaterminal
@@ -89,3 +87,5 @@ vim.keymap.set("i", "\"", "\"\"<Esc>i")
 -- vim.keymap.set("n", "gi", vim.lsp.buf.implementation, {})
 -- vim.keymap.set("n", "gr", require("telescope.builtin").lsp_references, {})
 -- vim.keymap.set("n", "<leader>K", vim.lsp.buf.hover, {})
+
+-- this is some text
