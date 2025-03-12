@@ -9,7 +9,7 @@ local on_attatch = function(_, _)
     vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
     vim.keymap.set("n", "gi", vim.lsp.buf.implementation, {})
     vim.keymap.set("n", "gr", require("telescope.builtin").lsp_references, {})
-    vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
+    vim.keymap.set("n", "<leader>K", vim.lsp.buf.hover, {})
 end
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 local lspconfig = require("lspconfig")
@@ -42,7 +42,7 @@ lspconfig.quick_lint_js.setup({
     capabilities = capabilities,
 })
 
-lspconfig.pylyzer.setup({
+lspconfig.pylsp.setup({
     on_attach = on_attatch,
     capabilities = capabilities,
 })
