@@ -41,9 +41,21 @@ local plugins = {
 
     -- LSP
     { "VonHeikemen/lsp-zero.nvim" },
-    { "neovim/nvim-lspconfig" },
+    {
+        "neovim/nvim-lspconfig",
+        dependencies = {
+            "folke/lazydev.nvim",
+            ft = "lua",
+            opts = {
+                library = {
+                    {path = "#{3rd}/luv/library", words = {"vim%.uv"}}
+                }
+            }
+        }
+    },
     { "williamboman/mason.nvim" },
     { "williamboman/mason-lspconfig.nvim" },
+    { "jose-elias-alvarez/null-ls.nvim" },
 
     -- completion
     { "hrsh7th/nvim-cmp" },
