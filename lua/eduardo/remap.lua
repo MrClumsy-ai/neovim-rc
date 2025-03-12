@@ -1,4 +1,4 @@
-vim.g.mapleader = " "
+
 
 -- project viewer (open nvim file explorer)
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
@@ -7,6 +7,9 @@ vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set("i", "<C-j>", "<Esc>")
 vim.keymap.set("i", "jj", "<Esc>")
 vim.keymap.set("v", "<C-j>", "<Esc>")
+
+-- enter normal mode in terminal
+vim.keymap.set("t", "jj", "<c-\\><c-n>")
 
 -- center movement
 vim.keymap.set("n", "j", "jzz")
@@ -52,3 +55,37 @@ vim.keymap.set("i", "(", "()<Esc>i")
 vim.keymap.set("i", "[", "[]<Esc>i")
 vim.keymap.set("i", "{", "{}<Esc>i")
 vim.keymap.set("i", "\"", "\"\"<Esc>i")
+
+-- plugin commands:
+-- floaterminal
+-- vim.keymap.set({"n", "t"}, "<leader>tt", toggle_terminal)
+--
+-- fugitive
+-- vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
+-- vim.keymap.set("n", "<leader>gp", ":Git push<CR>")
+--
+-- harpoon
+-- vim.keymap.set("n", "<leader>a", mark.add_file)
+-- vim.keymap.set("n", "<C-e>", ui.toggle_quick_menu)
+-- vim.keymap.set("n", "<C-j>", function() ui.nav_file(1) end)
+-- vim.keymap.set("n", "<C-k>", function() ui.nav_file(2) end)
+-- vim.keymap.set("n", "<C-l>", function() ui.nav_file(3) end)
+-- vim.keymap.set("n", "<C-;>", function() ui.nav_file(4) end)
+--
+-- telescope
+-- vim.keymap.set("n", "<leader>pf", builtin.find_files, { desc = "Telescope find files" })
+-- vim.keymap.set("n", "<C-p>", builtin.git_files, { desc = "Git find files" })
+-- vim.keymap.set("n", "<leader>ps", function()
+--   builtin.grep_string({search = vim.fn.input("Grep > ")})
+-- end)
+--
+-- undoTree
+-- vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
+--
+-- mason
+-- vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, {})
+-- vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
+-- vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
+-- vim.keymap.set("n", "gi", vim.lsp.buf.implementation, {})
+-- vim.keymap.set("n", "gr", require("telescope.builtin").lsp_references, {})
+-- vim.keymap.set("n", "<leader>K", vim.lsp.buf.hover, {})

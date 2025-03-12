@@ -1,6 +1,3 @@
--- enter normal mode in terminal
-vim.keymap.set("t", "jj", "<c-\\><c-n>")
-
 local state = {
   floating = {
     buf = -1,
