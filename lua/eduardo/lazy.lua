@@ -95,6 +95,14 @@ local plugins = {
 
 	-- comments
 	{ "numToStr/Comment.nvim" },
+
+	-- oil / filetree
+	{
+		"stevearc/oil.nvim",
+		dependencies = "nvim-tree/nvim-web-devicons",
+	},
+
+	-- something else
 }
 local opts = {}
 require("lazy").setup(plugins, opts)
