@@ -2,12 +2,16 @@
 -- vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 -- enter normal mode
-vim.keymap.set("i", "<M-j>", "<Esc>")
+vim.keymap.set("i", "<C-j>", "<Esc>")
 -- vim.keymap.set("i", "jj", "<Esc>")
-vim.keymap.set("v", "<M-j>", "<Esc>")
+vim.keymap.set("v", "<C-j>", "<Esc>")
 
 -- enter normal mode in terminal
 vim.keymap.set("t", "<M-j>", "<c-\\><c-n>")
+
+-- save and quit
+vim.keymap.set("n", "<leader>w", "<CMD>w<CR>")
+vim.keymap.set("n", "<leader>q", "<CMD>q!<CR>")
 
 -- center movement
 vim.keymap.set("n", "j", "jzz")
