@@ -25,8 +25,8 @@ vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
 -- move 10
-vim.keymap.set("n", "J", "10jzz")
-vim.keymap.set("n", "K", "10kzz")
+-- vim.keymap.set("n", "J", "10jzz")
+-- vim.keymap.set("n", "K", "10kzz")
 
 -- move selected text with J or K
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
@@ -57,6 +57,12 @@ vim.keymap.set("i", "(", "()<Esc>i")
 vim.keymap.set("i", "[", "[]<Esc>i")
 vim.keymap.set("i", "{", "{}<Esc>i")
 vim.keymap.set("i", '"', '""<Esc>i')
+
+-- move windows
+-- vim.keymap.set("n", "<C-h>", ":wincmd h<CR>")
+-- vim.keymap.set("n", "<C-j>", ":wincmd j<CR>")
+-- vim.keymap.set("n", "<C-k>", ":wincmd k<CR>")
+-- vim.keymap.set("n", "<C-l>", ":wincmd l<CR>")
 
 --[[
 -- plugin commands:

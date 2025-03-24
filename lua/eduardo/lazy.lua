@@ -143,6 +143,20 @@ local plugins = {
 		dependencies = "nvim-tree/nvim-web-devicons",
 	},
 
+	-- git signs
+	{
+		"lewis6991/gitsigns.nvim",
+		opts = {
+			signs = {
+				add = { text = "+" },
+				change = { text = "~" },
+				delete = { text = "-" },
+				topdelete = { text = "_" },
+				changedelete = { text = "~" },
+			},
+		},
+	},
+
 	-- something else
 }
 local opts = {}
