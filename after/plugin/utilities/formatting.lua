@@ -9,6 +9,7 @@ require("conform").setup({
 		markdown = { "prettier" },
 		python = { "autopep8" },
 		go = { "gofumpt" },
+		c = { "ast-grep" },
 	},
 
 	-- Enable auto-formatting on save
