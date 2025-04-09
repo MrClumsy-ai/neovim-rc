@@ -1,16 +1,19 @@
-local null_ls = require("null-ls")
-
-null_ls.setup({
-	sources = {
-		null_ls.builtins.formatting.prettier,
-		null_ls.builtins.formatting.stylua,
-		null_ls.builtins.formatting.gofumpt,
+require("conform").setup({
+	formatters_by_ft = {
+		lua = { "stylua" },
+		javascript = { "prettier" },
+		typescript = { "prettier" },
+		html = { "prettier" },
+		css = { "prettier" },
+		json = { "prettier" },
+		markdown = { "prettier" },
+		python = { "autopep8" },
+		go = { "gofumpt" },
 	},
-})
 
-vim.api.nvim_create_autocmd("BufWritePre", {
-	pattern = "*",
-	callback = function()
-		vim.lsp.buf.format({ async = false })
-	end,
+	-- Enable auto-formatting on save
+	format_on_save = {
+		timeout_ms = 500,
+		lsp_fallback = true, -- Fallback to LSP if no formatter is available
+	},
 })

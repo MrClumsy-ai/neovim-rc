@@ -29,38 +29,38 @@ vim.opt.rtp:prepend(lazypath)
 -- PLUGINS
 local plugins = {
 
-	-- colorscheme
+	-- Colorscheme
 	{ "ellisonleao/gruvbox.nvim", priority = 1000, config = true, opts = ... },
 
-	-- telescope
+	-- Telescope
 	{
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.8",
 		dependencies = { "nvim-lua/plenary.nvim" },
 	},
 
-	-- treesitter
+	-- Treesitter
 	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
 	-- colorscheme
 	{ "ellisonleao/gruvbox.nvim", priority = 1000, config = true, opts = ... },
 
-	-- telescope
+	-- Telescope
 	{
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.8",
 		dependencies = { "nvim-lua/plenary.nvim" },
 	},
 
-	-- treesitter
+	-- Treesitter
 	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
 
-	-- harpoon
+	-- Harpoon
 	{ "ThePrimeagen/harpoon" },
 
-	-- undotree
+	-- Undotree
 	{ "mbbill/undotree" },
 
-	-- fugitive
+	-- Fugitive
 	{ "tpope/vim-fugitive" },
 
 	-- LSP
@@ -81,6 +81,7 @@ local plugins = {
 	{ "williamboman/mason-lspconfig.nvim" },
 	{ "jose-elias-alvarez/null-ls.nvim" },
 
+	-- Define your formatters
 	-- LSP
 	{ "VonHeikemen/lsp-zero.nvim" },
 	{
@@ -99,7 +100,7 @@ local plugins = {
 	{ "williamboman/mason-lspconfig.nvim" },
 	{ "jose-elias-alvarez/null-ls.nvim" },
 
-	-- completion
+	-- Completion
 	{ "hrsh7th/nvim-cmp" },
 	{ "hrsh7th/cmp-buffer" },
 	{ "hrsh7th/cmp-path" },
@@ -107,11 +108,11 @@ local plugins = {
 	{ "hrsh7th/cmp-nvim-lsp" },
 	{ "hrsh7th/cmp-nvim-lua" },
 
-	-- snippets
+	-- Snippets
 	{ "L3MON4D3/LuaSnip" },
 	{ "rafamadriz/friendly-snippets" },
 
-	-- rust
+	-- Rust
 	{
 		"rust-lang/rust.vim",
 		ft = "rust",
@@ -120,10 +121,10 @@ local plugins = {
 		end,
 	},
 
-	-- cursorline
+	-- Cursorline
 	{ "ya2s/nvim-cursorline" },
 
-	-- color by mode
+	-- Color by mode
 	{
 		"mawkler/modicator.nvim",
 		dependencies = "ellisonleao/gruvbox.nvim",
@@ -134,16 +135,16 @@ local plugins = {
 		end,
 	},
 
-	-- comments
+	-- Comments
 	{ "numToStr/Comment.nvim" },
 
-	-- oil / filetree
+	-- Oil / filetree
 	{
 		"stevearc/oil.nvim",
 		dependencies = "nvim-tree/nvim-web-devicons",
 	},
 
-	-- git signs
+	-- Git signs
 	{
 		"lewis6991/gitsigns.nvim",
 		opts = {
@@ -157,7 +158,13 @@ local plugins = {
 		},
 	},
 
-	-- something else
+	-- Formatter
+	{
+		"stevearc/conform.nvim",
+		event = { "BufReadPre", "BufNewFile" }, -- Load on file open
+	},
+
+	-- Something else
 }
 local opts = {}
 require("lazy").setup(plugins, opts)
