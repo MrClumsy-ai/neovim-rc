@@ -1,7 +1,7 @@
 # Instalación 
 ## 1. Dependencies
 ```
-sudo apt-get install ninja-build gettext cmake curl build-essential nodejs npm golang git pip libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev python3-openssl binutils bison gcc ripgrep zsh neofetch unzip fzf tmux 
+sudo apt-get install ninja-build gettext cmake curl build-essential nodejs npm golang git pip libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev python3-openssl binutils bison gcc ripgrep zsh neofetch unzip fzf tmux flatpak gnome-software-plugin-flatpak
 ```
 ## 2. Installing go
 ```
@@ -151,4 +151,9 @@ git pull --all
 git checkout stable
 make CMAKE_BUILD_TYPE=RelWithDebInfo
 cd build && cpack -G DEB && sudo dpkg -i nvim-linux-x86_64.deb
+```
+## 10. Terminal configuration
+```
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+flatpak install flathub org.wezfurlong.wezterm
 ```
