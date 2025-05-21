@@ -156,4 +156,43 @@ cd build && cpack -G DEB && sudo dpkg -i nvim-linux-x86_64.deb
 ```
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 flatpak install flathub org.wezfurlong.wezterm
+nvim ~/.wezterm.lua
+```
+```
+local wezterm = require("wezterm")
+local config = wezterm.config_builder()
+config.color_scheme = "Gruvbox dark, hard (base16)"
+config.colors = { background = "black" }
+config.font_size = 16
+config.window_background_opacity = 0.6
+config.enable_tab_bar = false
+config.default_cursor_style = "BlinkingBar"
+config.cursor_blink_ease_out = "Linear"
+config.cursor_blink_rate = 400
+config.window_padding = {
+	left = 2,
+	right = 2,
+	top = 0,
+	bottom = 0,
+}
+config.keys = {
+	{ key = "T", mods = "CTRL|SHIFT", action = wezterm.action.DisableDefaultAssignment },
+	{ key = "1", mods = "CTRL|SHIFT", action = wezterm.action.DisableDefaultAssignment },
+	{ key = "2", mods = "CTRL|SHIFT", action = wezterm.action.DisableDefaultAssignment },
+	{ key = "3", mods = "CTRL|SHIFT", action = wezterm.action.DisableDefaultAssignment },
+	{ key = "4", mods = "CTRL|SHIFT", action = wezterm.action.DisableDefaultAssignment },
+	{ key = "Backspace", mods = "CTRL", action = wezterm.action.SendString("\x17") },
+	{ key = "C", mods = "CTRL|SHIFT", action = wezterm.action.SpawnTab("CurrentPaneDomain") },
+	{ key = "j", mods = "CTRL|SHIFT", action = wezterm.action.ActivateTab(0) },
+	{ key = "k", mods = "CTRL|SHIFT", action = wezterm.action.ActivateTab(1) },
+	{ key = "l", mods = "CTRL|SHIFT", action = wezterm.action.ActivateTab(2) },
+	{ key = ";", mods = "CTRL|SHIFT", action = wezterm.action.ActivateTab(3) },
+}
+config.default_prog = { "powershell.exe", "-NoLogo" }
+config.font = wezterm.font("JetBrains Mono", {})
+wezterm.on("gui-startup", function(cmd)
+	local tab, pane, window = wezterm.mux.spawn_window(cmd or {})
+	window:gui_window():maximize()
+end)
+return config
 ```
