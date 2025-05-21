@@ -140,6 +140,8 @@ bind r source-file ~/.tmux.conf
 set -g prefix C-s
 
 set -g @plugin 'tmux-plugins/tpm'
+# <C-s><C-s> to save; <C-s><C-r> to resurrect
+set -g @plugin 'tmux-plugins/tmux-resurrect'
 set -g @plugin 'egel/tmux-gruvbox'
 set -g @tmux-gruvbox 'dark'
 
