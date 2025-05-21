@@ -37,7 +37,7 @@ git config --global user.name "MrClusmy-ai"
 git config --global user email "eduardomenchaca01@hotmail.com"
 git config --global init.default branch main
 ```
-7. Terminal configuration
+7. Shell configuration
 ```
 chsh eduardo
 ```
