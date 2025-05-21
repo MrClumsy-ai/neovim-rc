@@ -118,8 +118,31 @@ typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
 ```
 source ~/.zshrc
 ```
+8: Tmux configuration
+```
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+nvim ~/.tmux.conf
+```
+```
+unbind r
+bind r source-file ~/.tmux.conf
 
-7. Installing nvim
+set -g prefix C-s
+
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'egel/tmux-gruvbox'
+set -g @tmux-gruvbox 'dark'
+
+set-option -g status-position top
+
+run '~/.tmux/plugins/tpm/tpm'
+
+# at first install
+# <C-b>r     // reload .tmux.conf file
+# <C-s>I     // install plugins
+```
+
+9. Installing nvim
 ```
 git clone https://github.com/neovim/neovim
 cd neovim
