@@ -37,7 +37,17 @@ git config --global user.name "MrClusmy-ai"
 git config --global user email "eduardomenchaca01@hotmail.com"
 git config --global init.default branch main
 ```
-## 7. Shell configuration
+## 7. Installing nvim
+```
+git clone https://github.com/neovim/neovim
+cd neovim
+git fetch --all
+git pull --all
+git checkout stable
+make CMAKE_BUILD_TYPE=RelWithDebInfo
+cd build && cpack -G DEB && sudo dpkg -i nvim-linux-x86_64.deb
+```
+## 8. Shell configuration
 ```
 chsh eduardo
 ```
@@ -118,7 +128,7 @@ typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
 ```
 source ~/.zshrc
 ```
-## 8: Tmux configuration
+## 9: Tmux configuration
 ```
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 nvim ~/.tmux.conf
@@ -142,16 +152,7 @@ run '~/.tmux/plugins/tpm/tpm'
 # <C-s>I     // install plugins
 ```
 
-## 9. Installing nvim
-```
-git clone https://github.com/neovim/neovim
-cd neovim
-git fetch --all
-git pull --all
-git checkout stable
-make CMAKE_BUILD_TYPE=RelWithDebInfo
-cd build && cpack -G DEB && sudo dpkg -i nvim-linux-x86_64.deb
-```
+
 ## 10. Terminal configuration
 ```
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
