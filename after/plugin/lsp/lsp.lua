@@ -6,7 +6,7 @@ require("mason-lspconfig").setup({
 		"gopls",
 		"html",
 		"lua_ls",
-		"pylsp",
+		"pyright",
 		"quick_lint_js",
 		"rust_analyzer",
 		"vuels",
@@ -49,7 +49,7 @@ lspconfig.lua_ls.setup({
 	capabilities = capabilities,
 })
 
-lspconfig.pylsp.setup({
+lspconfig.pyright.setup({
 	on_attach = on_attatch,
 	capabilities = capabilities,
 })
