@@ -1,7 +1,7 @@
 # Instalación 
 1. Dependencies
 ```
-sudo apt-get install ninja-build gettext cmake curl build-essential nodejs npm golang git pip libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev python3-openssl binutils bison gcc ripgrep
+sudo apt-get install ninja-build gettext cmake curl build-essential nodejs npm golang git pip libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev python3-openssl binutils bison gcc ripgrep zsh neofetch unzip fzf tmux 
 ```
 2. Installing go
 ```
@@ -37,6 +37,21 @@ git config --global user.name "MrClusmy-ai"
 git config --global user email "eduardomenchaca01@hotmail.com"
 git config --global init.default branch main
 ```
+7. Terminal configuration
+```
+chsh eduardo
+```
+/bin/zsh <CR>
+download Jetbrains mono nerd font
+```
+sudo unzip Downloads/JetBrainsMonoNaerd.zip -d /usr/share/fonts/truetype
+nvim ~/.zshrc
+```
+asdf
+```
+source ~/.zshrc
+```
+
 7. Installing nvim
 ```
 git clone https://github.com/neovim/neovim
