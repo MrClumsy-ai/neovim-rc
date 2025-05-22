@@ -33,9 +33,9 @@ sudo npm install -g typescript
 ```
 ## 6. Configuring Git
 ```
-git config --global user.name "MrClusmy-ai"
-git config --global user email "eduardomenchaca01@hotmail.com"
-git config --global init.default branch main
+git config --global user.name "UserName-42069"
+git config --global user email "email@email.com"
+git config --global init.defaultBranch main
 ```
 ## 7. Installing nvim
 ```
