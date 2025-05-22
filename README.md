@@ -54,7 +54,7 @@ chsh eduardo
 /bin/zsh <CR>
 download Jetbrains mono nerd font
 ```
-sudo unzip Downloads/JetBrainsMonoNaerd.zip -d /usr/share/fonts/truetype
+sudo unzip Downloads/JetBrainsMonoNerd.zip -d /usr/share/fonts/truetype
 nvim ~/.zshrc
 ```
 ```
