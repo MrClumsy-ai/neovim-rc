@@ -1,7 +1,7 @@
 # Instalación 
 ## 1. Dependencies
 ```
-sudo apt-get install ninja-build gettext cmake curl build-essential nodejs npm golang git pip libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev python3-openssl binutils bison gcc ripgrep zsh neofetch unzip fzf tmux flatpak gnome-software-plugin-flatpak
+sudo apt-get install ninja-build gettext cmake curl build-essential nodejs npm golang git pip libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev python3-openssl binutils bison gcc ripgrep zsh neofetch unzip fzf tmux flatpak gnome-software-plugin-flatpak copyq
 ```
 ## 2. Installing go
 ```
